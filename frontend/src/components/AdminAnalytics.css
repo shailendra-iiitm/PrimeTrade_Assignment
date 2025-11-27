@@ -1,0 +1,156 @@
+.admin-analytics {
+  padding: 1rem 0;
+}
+
+.analytics-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.summary-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.summary-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.summary-card .value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.user-performance {
+  margin-top: 2rem;
+}
+
+.user-performance h3 {
+  color: #1f2937;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.performance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.user-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.user-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #3b82f6;
+}
+
+.user-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.user-info h4 {
+  margin: 0 0 0.25rem 0;
+  color: #1f2937;
+  font-size: 1.125rem;
+}
+
+.user-info p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.completion-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.completion-badge.high {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.completion-badge.medium {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.completion-badge.low {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.task-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-item .label {
+  color: #6b7280;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-item .value {
+  color: #1f2937;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.no-data {
+  text-align: center;
+  padding: 3rem;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .analytics-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .performance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .task-stats {
+    grid-template-columns: 1fr;
+  }
+}
