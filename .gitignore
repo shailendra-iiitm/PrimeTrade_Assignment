@@ -1,0 +1,61 @@
+# node_modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Build outputs
+dist/
+build/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# OS files
+Thumbs.db
+desktop.ini
+
+# Backend specific
+backend/node_modules/
+backend/*.log
+backend/.env
+
+# Frontend specific
+frontend/node_modules/
+frontend/dist/
+frontend/*.log
+frontend/.env
+
+# Test files (remove these in production)
+backend/testAuthAPI.js
+backend/testAPI.js
+backend/diagnoseProblem.js
+backend/checkUsers.js
+backend/createTestUsers.js
+backend/testDB.js
+backend/runAuthTest.bat
+backend/runTests.ps1
+backend/runTests.bat
+assignment_email.py

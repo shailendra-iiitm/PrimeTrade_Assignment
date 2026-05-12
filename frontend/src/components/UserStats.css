@@ -1,0 +1,78 @@
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  border-radius: 12px;
+  color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0;
+  opacity: 0.95;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-card .stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.stat-card.pending {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+}
+
+.stat-card.in-progress {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+}
+
+.stat-card.completed {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+}
+
+.stat-card.overdue {
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+}
+
+@media (max-width: 1024px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .stat-card h3 {
+    font-size: 0.75rem;
+  }
+
+  .stat-card .stat-number {
+    font-size: 1.5rem;
+  }
+}
